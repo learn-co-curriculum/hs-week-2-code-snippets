@@ -36,9 +36,18 @@ This is your completed form with input fields
   </form>
 ```
 
-###Creating a new tweet in our controller - code snippet 2
+###Checking out the params hash - code snippet 4
 
 This goes in `application_controller.rb`
+```ruby
+  post '/tweets' do
+    puts params
+    binding.pry
+  end
+```
+
+###Creating a new tweet in our controller - code snippet 5
+
 ```ruby
   post '/tweets' do
     Tweet.new(params[:username], params[:status])
