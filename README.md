@@ -16,7 +16,16 @@ This goes in `tweets.erb`
   </form>
 ```
 
-###Setting up a post route in our application controller - code snippet 2
+###Setting up a get route in our application controller - code snippet 2
+
+This goes in `application_controller.rb`
+```ruby
+  get '/tweets' do
+
+  end
+```
+
+###Setting up a post route in our application controller - code snippet 3
 
 This goes in `application_controller.rb`
 ```ruby
@@ -25,7 +34,7 @@ This goes in `application_controller.rb`
   end
 ```
 
-###Setting up input fields - code snippet 3
+###Setting up input fields - code snippet 4
 
 This is your completed form with input fields
 ```
@@ -36,7 +45,7 @@ This is your completed form with input fields
   </form>
 ```
 
-###Checking out the params hash - code snippet 4
+###Checking out the params hash - code snippet 5
 
 This goes in `application_controller.rb`
 ```ruby
@@ -46,11 +55,11 @@ This goes in `application_controller.rb`
   end
 ```
 
-###Creating a new tweet in our controller - code snippet 5
+###Creating a new tweet in our controller - code snippet 6
 
 ```ruby
   post '/tweets' do
     Tweet.new(params[:username], params[:status])
-    redirect '/tweets'
+    redirect '/'
   end
 ```
