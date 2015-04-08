@@ -21,7 +21,7 @@ This goes in `tweets.erb`
 This goes in `application_controller.rb`
 ```ruby
   get '/tweets' do
-
+    erb :tweets
   end
 ```
 
