@@ -9,9 +9,9 @@ type: code snippets
 
 ###Setting up a form - code snippet 1
 
-This goes in `tweets.erb`
+This goes in `tweet.erb`
 ```
-  <form action="/tweets" method="POST">
+  <form action="/tweet" method="POST">
 
   </form>
 ```
@@ -20,8 +20,8 @@ This goes in `tweets.erb`
 
 This goes in `application_controller.rb`
 ```ruby
-  get '/tweets' do
-    erb :tweets
+  get '/tweet' do
+    erb :tweet
   end
 ```
 
@@ -29,7 +29,7 @@ This goes in `application_controller.rb`
 
 This goes in `application_controller.rb`
 ```ruby
-  post '/tweets' do
+  post '/tweet' do
 
   end
 ```
@@ -38,7 +38,7 @@ This goes in `application_controller.rb`
 
 This is your completed form with input fields
 ```
-  <form action="/tweets" method="POST">
+  <form action="/tweet" method="POST">
     <p>Username: <input type="text" name="username"></p>
     <p>Status: <input type="text" name="status"></p>
     <input class="btn btn-primary" type="submit">
@@ -49,7 +49,7 @@ This is your completed form with input fields
 
 This goes in `application_controller.rb`
 ```ruby
-  post '/tweets' do
+  post '/tweet' do
     puts params
     binding.pry
   end
@@ -58,7 +58,7 @@ This goes in `application_controller.rb`
 ###Creating a new tweet in our controller - code snippet 6
 
 ```ruby
-  post '/tweets' do
+  post '/tweet' do
     Tweet.new(params[:username], params[:status])
     redirect '/'
   end
