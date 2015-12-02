@@ -58,3 +58,5 @@ This goes in `application_controller.rb`
     redirect '/'
   end
 ```
+
+<a href='https://learn.co/lessons/hs-week-2-code-snippets' data-visibility='hidden'>View this lesson on Learn.co</a>
